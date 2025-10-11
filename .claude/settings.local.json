@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/connorquigley/Projects/107 APP/Part 107 Trainer/Part 107 Trainer/**)",
+      "Read(//Users/connorquigley/Projects/StudyAPPS/**)",
+      "Read(//Users/connorquigley/Projects/StudyAPPS/Phlebotomy Test Prep 2025/**)",
+      "Read(//Users/connorquigley/Projects/107 APP/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
