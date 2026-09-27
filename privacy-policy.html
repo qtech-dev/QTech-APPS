@@ -84,7 +84,7 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Last Updated: September 17, 2026</p>
+    <p class="effective-date">Last Updated: September 27, 2026</p>
 
     <div class="important">
         <strong>YOUR PRIVACY MATTERS:</strong> This Privacy Policy explains how Connor Quigley collects, uses, shares, and protects your personal information. Please read this policy carefully.
@@ -147,7 +147,7 @@
     <ul>
         <li><strong>Device Identifiers:</strong>
             <ul>
-                <li>Device ID (anonymized identifier for analytics)</li>
+                <li>Device or app-assigned identifiers for analytics; these are pseudonymous, not necessarily anonymous</li>
                 <li>Advertising identifier (IDFA) if provided</li>
                 <li>Device model and operating system version</li>
             </ul>
@@ -163,7 +163,7 @@
         </li>
         <li><strong>Network Information:</strong>
             <ul>
-                <li>IP address (anonymized)</li>
+                <li>IP address and connection information processed by our hosting provider and backend for security and usage limits</li>
                 <li>Network connection type (WiFi, cellular)</li>
                 <li>General location (country/region level only)</li>
             </ul>
@@ -219,7 +219,7 @@
         <tr>
             <td><strong>OpenAI</strong></td>
             <td>AI-powered tutoring</td>
-            <td>Chat messages, conversation context, anonymized usage patterns</td>
+            <td>Chat messages, relevant conversation and study context, submitted images, and generated replies stored in API logs</td>
         </tr>
         <tr>
             <td><strong>Apple Services</strong></td>
@@ -315,14 +315,16 @@
         <li><strong>Data Controls:</strong> We implement data minimization and anonymization where possible</li>
     </ul>
 
-    <h4>OpenAI (AI Services)</h4>
+    <h4 id="ai-tutor">OpenAI (AI Services and Conversation Logs)</h4>
     <ul>
         <li><strong>Information Shared with OpenAI:</strong> Chat messages and relevant conversation history; for explanations, the question, choices, selected answer, question image when present, and related follow-up conversation</li>
-        <li><strong>Purpose:</strong> Provide AI-powered tutoring and personalized explanations</li>
+        <li><strong>Purpose:</strong> Provide AI-powered tutoring and explanations, troubleshoot problems, support users, evaluate answer quality, improve the tutor, and investigate misuse</li>
         <li><strong>Privacy Policy:</strong> <a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a></li>
-        <li><strong>Data Processing:</strong> AI requests pass through our study service to OpenAI. Our service receives an app identifier, device identifier, and connection information for authentication and usage limits.</li>
+        <li><strong>Data Processing:</strong> AI requests pass through our study backend hosted by Vercel to OpenAI. Our service receives an app identifier, device identifier, and connection information for authentication and usage limits. Rate-limit keys hash client identifiers. Vercel also processes operational records such as request counts and errors.</li>
+        <li><strong>Storage and Review:</strong> We enable storage of AI requests, including submitted images and conversation context, and generated replies in OpenAI's API logs. Authorized personnel operating our apps may review these logs for the purposes above. Anything personal you include in a message or image is part of that submission. We do not sell tutor conversations or share them for advertising.</li>
+        <li><strong>Model Training:</strong> Enabling request storage does not itself opt API data into model training. OpenAI states that API data is not used to train its models unless the API customer explicitly opts in. See <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI's API data controls</a>.</li>
         <li><strong>Your Choice:</strong> AI features are optional. When you use the AI Tutor or request an AI explanation, the study content described above is sent through our service to OpenAI. If you do not want to send this content, do not use AI features; quizzes and built-in explanations remain available.</li>
-        <li><strong>Minimize Personal Data:</strong> Do not include personal or sensitive information in messages to the AI Tutor.</li>
+        <li><strong>Minimize Personal Data:</strong> Do not submit passwords, payment details, identifiable patient information, or other sensitive information about yourself or anyone else in messages or images.</li>
     </ul>
 
     <h4>Apple Inc. (Platform Provider)</h4>
@@ -350,6 +352,7 @@
     <h2>5. Data Retention</h2>
 
     <p>We retain your information for different periods depending on the type and purpose. We keep data only as long as necessary to provide our services, comply with legal requirements, and protect our legitimate business interests. After these periods expire, we securely delete or anonymize your information.</p>
+    <p><strong>AI requests and replies:</strong> OpenAI documents a standard retention period of at least 30 days for stored API responses, subject to its data controls and applicable legal or safety requirements. OpenAI may retain separate abuse-monitoring logs. Provider retention and deletion follow those controls; deleting a conversation on your device or uninstalling an app does not automatically delete these provider records.</p>
 
     <h2>6. Your Privacy Rights and Choices</h2>
 
@@ -360,7 +363,7 @@
     <p>You can update certain information through app settings or by contacting us at qtechdev1@gmail.com</p>
 
     <h3>6.3 Deletion</h3>
-    <p>You have the right to request deletion of your personal information. To delete your data, contact us at qtechdev1@gmail.com with your request and device identifier. Note that most data is stored locally on your device - uninstalling the app will delete this local data. Some server-side data may be retained as required by law or for legitimate business purposes.</p>
+    <p>You may request deletion by contacting qtechdev1@gmail.com. For AI interactions, include the app name and approximate date and time so we can help locate relevant records. Because the apps do not require an account, we may need additional information; do not send sensitive content unnecessarily. Uninstalling the app deletes locally stored data but does not automatically delete AI logs, analytics, or purchase records held by providers. We handle applicable deletion requests subject to provider capabilities and legal or security retention requirements.</p>
 
     <h3>6.4 Notification Preferences</h3>
     <p>Control notifications through:</p>
@@ -460,7 +463,8 @@
     <ul>
         <li>Analyzing your questions and conversation context</li>
         <li>Generating responses using OpenAI's language models</li>
-        <li>Adapting responses based on your study patterns</li>
+        <li>Using the study and conversation context included in your request</li>
+        <li>Storing requests and replies in OpenAI API logs for authorized review as described in Sections 4 and 5</li>
     </ul>
 
     <h3>11.2 Limitations of AI</h3>
@@ -563,7 +567,7 @@
         <ul>
             <li><strong>What We Collect:</strong> Device info, usage data, study progress, AI conversations, analytics</li>
             <li><strong>How We Use It:</strong> Provide services, personalize learning, improve apps, analytics</li>
-            <li><strong>Who We Share With:</strong> RevenueCat (subscriptions), Amplitude (analytics), OpenAI (AI features), Apple (platform services)</li>
+            <li><strong>Who We Share With:</strong> RevenueCat (subscriptions), Amplitude (analytics), Vercel (backend hosting), OpenAI (AI features and conversation logs), Apple (platform services)</li>
             <li><strong>We DO NOT Sell Your Data</strong></li>
             <li><strong>Your Rights:</strong> Access, delete, and correct your data</li>
             <li><strong>Children:</strong> Age 13+ required; parental consent for under 18</li>
